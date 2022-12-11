@@ -1,0 +1,187 @@
+# aliases
+## daily housekeeping
+### brew and mackup
+alias bmb="brew update --verbose && brew upgrade --verbose && brew cleanup --verbose --prune=all && mackup backup --verbose && cd ~/dev/utils/mackup-backups"
+alias bmr="brew update --verbose && brew upgrade --verbose && brew cleanup --verbose --prune=all && mackup restore --verbose && cd ~/dev/utils/mackup-backups"
+alias b="brew update --verbose && brew upgrade --verbose && brew cleanup --verbose --prune=all"
+alias mb="mackup backup --verbose && cd ~/dev/utils/mackup-backups"
+alias mr="mackup restore --verbose && cd ~/dev/utils/mackup-backups"
+### see npm
+
+## bashcrypto
+### change to the bashcrypto directory; decrypt swords to ~/Downloads; open file
+alias cdobds="cd ~/dev/utils/bashcrypto && ./bashcrypto -d -i ~/Dropbox/docs/swords/swords.txt.enc -o ~/Downloads/swords.txt && open ~/Downloads/swords.txt"
+alias cdobdsh="cd ~/dev/utils/bashcrypto && ./bashcrypto -d -i ~/Dropbox/docs/swords/swords.txt.enc -o ~/Downloads/swords.txt && open ~/Downloads/swords.txt && cd ~"
+alias cdobda="cd ~/dev/utils/bashcrypto && ./bashcrypto -d -i ~/Dropbox/docs/swords/ac.txt.enc -o ~/Downloads/ac.txt && open ~/Downloads/ac.txt"
+alias cdobdah="cd ~/dev/utils/bashcrypto && ./bashcrypto -d -i ~/Dropbox/docs/swords/ac.txt.enc -o ~/Downloads/ac.txt && open ~/Downloads/ac.txt && cd ~"
+### remove swords
+alias rms="rm -r ~/Downloads/swords.txt"
+alias rma="rm -r ~/Downloads/ac.txt"
+### encrypt swords
+alias ens="cd ~/dev/utils/bashcrypto && ./bashcrypto -e -i ~/Downloads/swords.txt -o ~/Dropbox/docs/swords/swords.txt.enc"
+### encrypt with a password
+alias be="./bashcrypto -e -i"
+### decrypt with a password
+alias bd="./bashcrypto -d -i"
+
+## git
+### git develop and master
+<!-- 'gdp' stands for 'git deploy' -->
+alias gdp="git checkout main && git merge dev && git push && git checkout dev"
+### common
+alias g="git"
+alias gs="git status"
+alias g1="git add"
+alias gad="git add ."
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gam="git add . && git commit -m"
+alias gp="git push"
+alias gph="git push && -" # gph = git push && [hyphen, or -]
+alias gch="git checkout"
+alias gf="git fetch"
+### other
+alias gd="git diff"
+alias gl="git log"
+alias glo="git log --oneline"
+
+## npm
+alias n="npm"
+alias ngo="npm -g outdated"
+alias ngi="npm -g i"
+alias ngl="npm -g list"
+alias no="npm outdated"
+alias ni="npm i"
+alias nl="npm list"
+alias ns="npm start"
+alias nrd="npm run dev"
+alias nrb="npm run build"
+alias nrw="npm run watch"
+alias nrs="npm run server"
+alias nrc="npm run client"
+
+## gatsby
+alias gyd="gatsby develop"
+alias gycd="gatsby clean && gatsby develop"
+alias gybs="gastby build && gatsby serve"
+alias gycbs="gatsby clean && gatsby build && gatsby serve"
+
+## theme kit
+### deploy
+alias tdcomp="theme deploy --env=com_prod"
+alias tdcompc="theme deploy --env=com_prod_cust"
+alias tdcompc1="theme deploy --env=com_prod_cust_1"
+alias tdcomd="theme deploy --env=com_dev"
+alias tdcomdc="theme deploy --env=com_dev_cust"
+alias tdcomdc1="theme deploy --env=com_dev_cust_1"
+alias tdcap="theme deploy --env=ca_prod"
+alias tdcapc="theme deploy --env=ca_prod_cust"
+alias tdcapc1="theme deploy --env=ca_prod_cust_1"
+alias tdcad="theme deploy --env=ca_dev"
+alias tdcadc="theme deploy --env=ca_dev_cust"
+alias tdcadc1="theme deploy --env=ca_dev_cust_1"
+### npm run dev and deploy
+alias ntdcomp="npm run dev && theme deploy --env=com_prod"
+alias ntdcompc="npm run dev && theme deploy --env=com_prod_cust"
+alias ntdcompc1="npm run dev && theme deploy --env=com_prod_cust_1"
+alias ntdcomd="npm run dev && theme deploy --env=com_dev"
+alias ntdcomdc="npm run dev && theme deploy --env=com_dev_cust"
+alias ntdcomdc1="npm run dev && theme deploy --env=com_dev_cust_1"
+alias ntdcap="npm run dev && theme deploy --env=ca_prod"
+alias ntdcapc="npm run dev && theme deploy --env=ca_prod_cust"
+alias ntdcapc1="npm run dev && theme deploy --env=ca_prod_cust_1"
+alias ntdcad="npm run dev && theme deploy --env=ca_dev"
+alias ntdcadc="npm run dev && theme deploy --env=ca_dev_cust"
+alias ntdcadc1="npm run dev && theme deploy --env=ca_dev_cust_1"
+### deploy and watch
+alias tdwcomp="theme deploy --env=com_prod && theme watch --env=com_prod"
+alias tdwcompc="theme deploy --env=com_prod_cust && theme watch --env=com_prod_cust"
+alias tdwcompc1="theme deploy --env=com_prod_cust_1 && theme watch --env=com_prod_cust_1"
+alias tdwcomd="theme deploy --env=com_dev && theme watch --env=com_dev"
+alias tdwcomdc="theme deploy --env=com_dev_cust && theme watch --env=com_dev_cust"
+alias tdwcomdc1="theme deploy --env=com_dev_cust_1 && theme watch --env=com_dev_cust_1"
+alias tdwcap="theme deploy --env=ca_prod && theme watch --env=ca_prod"
+alias tdwcapc="theme deploy --env=ca_prod_cust && theme watch --env=ca_prod_cust"
+alias tdwcapc1="theme deploy --env=ca_prod_cust_1 && theme watch --env=ca_prod_cust_1"
+alias tdwcad="theme deploy --env=ca_dev && theme watch --env=ca_dev"
+alias tdwcadc="theme deploy --env=ca_dev_cust && theme watch --env=ca_dev_cust"
+alias tdwcadc1="theme deploy --env=ca_dev_cust_1 && theme watch --env=ca_dev_cust_1"
+### open
+alias tocomp="theme open --env=com_prod"
+alias tocompc="theme open --env=com_prod_cust"
+alias tocompc1="theme open --env=com_prod_cust_1"
+alias tocomd="theme open --env=com_dev"
+alias tocomdc="theme open --env=com_dev_cust"
+alias tocomdc1="theme open --env=com_dev_cust_1"
+alias tocap="theme open --env=ca_prod"
+alias tocapc="theme open --env=ca_prod_cust"
+alias tocapc1="theme open --env=ca_prod_cust_1"
+alias tocad="theme open --env=ca_dev"
+alias tocadc="theme open --env=ca_dev_cust"
+alias tocadc1="theme open --env=ca_dev_cust_1"
+### deploy and open
+alias tdocomp="theme deploy --env=com_prod && theme open --env=com_prod"
+alias tdocompc="theme deploy --env=com_prod_cust && theme open --env=com_prod_cust"
+alias tdocompc1="theme deploy --env=com_prod_cust_1 && theme open --env=com_prod_cust_1"
+alias tdocomd="theme deploy --env=com_dev && theme open --env=com_dev"
+alias tdocomdc="theme deploy --env=com_dev_cust && theme open --env=com_dev_cust"
+alias tdocomdc1="theme deploy --env=com_dev_cust_1 && theme open --env=com_dev_cust_1"
+alias tdocap="theme deploy --env=ca_prod && theme open --env=ca_prod"
+alias tdocapc="theme deploy --env=ca_prod_cust && theme open --env=ca_prod_cust"
+alias tdocapc1="theme deploy --env=ca_prod_cust_1 && theme open --env=ca_prod_cust_1"
+alias tdocad="theme deploy --env=ca_dev && theme open --env=ca_dev"
+alias tdocadc="theme deploy --env=ca_dev_cust && theme open --env=ca_dev_cust"
+alias tdocadc1="theme deploy --env=ca_dev_cust_1 && theme open --env=ca_dev_cust_1"
+### npm run dev, deploy, and open
+alias ntdocomp="npm run dev && theme deploy --env=com_prod && theme open --env=com_prod"
+alias ntdocompc="npm run dev && theme deploy --env=com_prod_cust && theme open --env=com_prod_cust"
+alias ntdocompc1="npm run dev && theme deploy --env=com_prod_cust_1 && theme open --env=com_prod_cust_1"
+alias ntdocomd="npm run dev && theme deploy --env=com_dev && theme open --env=com_dev"
+alias ntdocomdc="npm run dev && theme deploy --env=com_dev_cust && theme open --env=com_dev_cust"
+alias ntdocomdc1="npm run dev && theme deploy --env=com_dev_cust_1 && theme open --env=com_dev_cust_1"
+alias ntdocap="npm run dev && theme deploy --env=ca_prod && theme open --env=ca_prod"
+alias ntdocapc="npm run dev && theme deploy --env=ca_prod_cust && theme open --env=ca_prod_cust"
+alias ntdocapc1="npm run dev && theme deploy --env=ca_prod_cust_1 && theme open --env=ca_prod_cust_1"
+alias ntdocad="npm run dev && theme deploy --env=ca_dev && theme open --env=ca_dev"
+alias ntdocadc="npm run dev && theme deploy --env=ca_dev_cust && theme open --env=ca_dev_cust"
+alias ntdocadc1="npm run dev && theme deploy --env=ca_dev_cust_1 && theme open --env=ca_dev_cust_1"
+### deploy, open, and watch
+alias tdowcomp="theme deploy --env=com_prod && theme open --env=com_prod && theme watch --env=com_prod"
+alias tdowcompc="theme deploy --env=com_prod_cust && theme open --env=com_prod_cust && theme watch --env=com_prod_cust"
+alias tdowcompc1="theme deploy --env=com_prod_cust_1 && theme open --env=com_prod_cust_1 && theme watch --env=com_prod_cust_1"
+alias tdowcomd="theme deploy --env=com_dev && theme open --env=com_dev && theme watch --env=com_dev"
+alias tdowcomdc="theme deploy --env=com_dev_cust && theme open --env=com_dev_cust && theme watch --env=com_dev_cust"
+alias tdowcomdc1="theme deploy --env=com_dev_cust_1 && theme open --env=com_dev_cust_1 && theme watch --env=com_dev_cust_1"
+alias tdowcap="theme deploy --env=ca_prod && theme open --env=ca_prod && theme watch --env=ca_prod"
+alias tdowcapc="theme deploy --env=ca_prod_cust && theme open --env=ca_prod_cust && theme watch --env=ca_prod_cust"
+alias tdowcapc1="theme deploy --env=ca_prod_cust_1 && theme open --env=ca_prod_cust_1 && theme watch --env=ca_prod_cust_1"
+alias tdowcad="theme deploy --env=ca_dev && theme open --env=ca_dev && theme watch --env=ca_dev"
+alias tdowcadc="theme deploy --env=ca_dev_cust && theme open --env=ca_dev_cust && theme watch --env=ca_dev_cust"
+alias tdowcadc1="theme deploy --env=ca_dev_cust_1 && theme open --env=ca_dev_cust_1 && theme watch --env=ca_dev_cust_1"
+### other theme kit
+alias tocompl="theme open --env=com_prod_live"
+alias tdcomplal="theme deploy --env=com_prod_live --allow-live"
+alias tdocomplal="theme deploy --env=com_prod_live --allow-live && theme open --env=com_prod_live"
+
+## vscode-insiders
+alias c="code-insiders"
+alias c.="code-insiders ."
+
+## python
+alias py3="python3"
+
+## misc
+### gb folders in vscode-insiders
+#### gb
+alias cdgb="cd ~/dev/jobs/gb/shopify-ghostbed"
+alias cgb="cd ~/dev/jobs/gb/shopify-ghostbed && c."
+alias cgbh="cd ~/dev/jobs/gb/shopify-ghostbed && c. && -"
+#### gb notes
+alias cdgbn="cd ~/dev/jobs/gb/gb-notes"
+alias cgbn="cd ~/dev/jobs/gb/gb-notes && c."
+alias cgbnh="cd ~/dev/jobs/gb/gb-notes && c. && -"
+#### speedtest cli
+alias sp="speedtest-cli"
+
+## zsh
+alias l="ls -laF"
