@@ -45,7 +45,7 @@ alias gl="git log"
 alias glo="git log --oneline"
 
 ## npm
-alias n="npm"
+alias n=npm
 alias ngo="npm -g outdated"
 alias ngi="npm -g i"
 alias ngl="npm -g list"
@@ -66,7 +66,19 @@ alias gybs="gastby build && gatsby serve"
 alias gycbs="gatsby clean && gatsby build && gatsby serve"
 
 ## pnpm
-alias pn=pnpm
+alias p=pnpm
+alias pgo="pnpm -g outdated"
+alias pgi="pnpm -g i"
+alias pgl="pnpm -g list"
+alias po="pnpm outdated"
+alias pi="pnpm i"
+alias pl="pnpm list"
+alias ps="pnpm start"
+alias prd="pnpm run dev"
+alias prb="pnpm run build"
+alias prw="pnpm run watch"
+alias prs="pnpm run server"
+alias prc="pnpm run client"
 
 ## python
 alias py3="python3"
