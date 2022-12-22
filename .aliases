@@ -45,19 +45,19 @@ alias gl="git log"
 alias glo="git log --oneline"
 
 ## npm
-alias n=npm
-alias ngo="npm -g outdated"
-alias ngi="npm -g i"
-alias ngl="npm -g list"
-alias no="npm outdated"
-alias ni="npm i"
-alias nl="npm list"
-alias ns="npm start"
-alias nrd="npm run dev"
-alias nrb="npm run build"
-alias nrw="npm run watch"
-alias nrs="npm run server"
-alias nrc="npm run client"
+# alias n=npm
+# alias ngo="npm -g outdated"
+# alias ngi="npm -g i"
+# alias ngl="npm -g list"
+# alias no="npm outdated"
+# alias ni="npm i"
+# alias nl="npm list"
+# alias ns="npm start"
+# alias nrd="npm run dev"
+# alias nrb="npm run build"
+# alias nrw="npm run watch"
+# alias nrs="npm run server"
+# alias nrc="npm run client"
 
 ## gatsby
 alias gyd="gatsby develop"
